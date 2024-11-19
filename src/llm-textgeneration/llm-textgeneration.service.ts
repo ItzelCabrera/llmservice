@@ -12,7 +12,7 @@ import { CVJoinFieldDTO } from './dto/CVJoinFieldDTO.dto';
 @Injectable()
 export class LlmTextgenerationService{
   private openai = new OpenAI({
-      apiKey: '',
+      apiKey: process.env.OPENAI_API_KEY
   });
 
   constructor(
@@ -40,16 +40,18 @@ export class LlmTextgenerationService{
   }*/
 
   async generateQuestions(cvJoinFieldDTO:CVJoinFieldDTO){
-    console.log('service ' + cvJoinFieldDTO);
+    console.log('input:', JSON.stringify(cvJoinFieldDTO));
+    console.log(this.openai.apiKey)
     const questions =  await generateQuestionsUseCase(this.openai, cvJoinFieldDTO);
-    console.log('service ' + questions)
+    console.log('output:', JSON.stringify(questions));
     this.authClient.emit('questionsPublishJSON',JSON.stringify(questions));
   }
 
   async scoreAnswers(questionsJoinAnswersDTO:QuestionsJoinAnswersDTO){
-    console.log('service ' + questionsJoinAnswersDTO);
+    console.log('input:', JSON.stringify(questionsJoinAnswersDTO));
+    console.log(this.openai.apiKey)
     const scores =  await scoreAnswersUseCase(this.openai, questionsJoinAnswersDTO);
-    console.log(scores)
+    console.log('output:', JSON.stringify(scores));
     this.authClient.emit('answersScoresPublishJSON',JSON.stringify(scores));
   }
 }
