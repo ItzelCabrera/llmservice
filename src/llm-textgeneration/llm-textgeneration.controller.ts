@@ -10,7 +10,7 @@ import { UpdateLlmTextgenerationDto } from './dto/update-llm-textgeneration.dto'
 import { CVFieldsDTO } from './dto/CVFields.dto';
 import { QuestionsJoinAnswersDTO } from './dto/QuestionsJoinAnswers.dto';
 import { generateQuestionsUseCase } from './use-cases/generateQuestions.use-case';
-import { CVFieldDTO } from './dto/CVField.dto';
+import { CVFieldDTO } from './dto/CVField.dto'; 
 import { CVJoinFieldDTO } from './dto/CVJoinFieldDTO.dto';
 
 @Controller('llm-textgeneration')
