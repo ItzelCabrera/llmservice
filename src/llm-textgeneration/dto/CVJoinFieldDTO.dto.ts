@@ -5,7 +5,7 @@ import { CVFieldDTO } from './CVField.dto';
 
 export class CVJoinFieldDTO{
     @IsNumber()
-    readonly cvId: number;
+    readonly userId: number;
 
     @IsArray()
     //@ArrayNotEmpty()
