@@ -11,7 +11,6 @@ import { CVFieldsDTO } from './dto/CVFields.dto';
 import { QuestionsJoinAnswersDTO } from './dto/QuestionsJoinAnswers.dto';
 import { generateQuestionsUseCase } from './use-cases/generateQuestions.use-case';
 import { CVFieldDTO } from './dto/CVField.dto';
-import { CurriculumVitaeDTO } from './dto/CurriculumVitae.dto';
 import { CVJoinFieldDTO } from './dto/CVJoinFieldDTO.dto';
 
 @Controller('llm-textgeneration')
