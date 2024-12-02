@@ -2,8 +2,6 @@ import { Inject, Injectable, OnModuleInit} from '@nestjs/common';
 import { ClientKafka, MessagePattern, Payload } from '@nestjs/microservices';
 import OpenAI from "openai";
 
-import { CreateLlmTextgenerationDto } from './dto/create-llm-textgeneration.dto';
-import { UpdateLlmTextgenerationDto } from './dto/update-llm-textgeneration.dto';
 import { generateQuestionsUseCase } from './use-cases/generateQuestions.use-case';
 import { scoreAnswersUseCase } from './use-cases/scoreAnswers.use-case';
 import { QuestionsJoinAnswersDTO } from './dto/QuestionsJoinAnswers.dto';

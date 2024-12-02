@@ -5,9 +5,6 @@ import { ClientKafka, MessagePattern, Payload } from '@nestjs/microservices';
 import { plainToClass } from 'class-transformer';
 
 import { LlmTextgenerationService } from './llm-textgeneration.service';
-import { CreateLlmTextgenerationDto } from './dto/create-llm-textgeneration.dto';
-import { UpdateLlmTextgenerationDto } from './dto/update-llm-textgeneration.dto';
-import { CVFieldsDTO } from './dto/CVFields.dto';
 import { QuestionsJoinAnswersDTO } from './dto/QuestionsJoinAnswers.dto';
 import { generateQuestionsUseCase } from './use-cases/generateQuestions.use-case';
 import { CVFieldDTO } from './dto/CVField.dto'; 
