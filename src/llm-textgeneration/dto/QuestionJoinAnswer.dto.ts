@@ -9,4 +9,7 @@ export class QuestionJoinAnswerDTO{
 
     @IsString()
     readonly answerUser: string;
+
+    @IsString()
+    readonly answerLLM: string;
 }
