@@ -16,7 +16,7 @@ export const generateQuestionsUseCase = async (openai: OpenAI, cvJoinFieldDTO: C
                 content: JSON.stringify(cvJoinFieldDTO.cvFieldsDTOs)
             }
         ],
-        model: "gpt-3.5-turbo-0125",
+        model: "gpt-4o-mini",
     });
     //const content = cvJoinFieldDTO.cvId+ "||" + chatCompletion.choices[0].message.content;
     //console.log({content})

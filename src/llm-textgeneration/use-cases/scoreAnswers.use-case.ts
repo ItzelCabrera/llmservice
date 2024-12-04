@@ -14,7 +14,7 @@ export const scoreAnswersUseCase = async(openai:OpenAI, questionsJoinAnswersDTO:
                 content: JSON.stringify(questionsJoinAnswersDTO.qJaIsDTOs) //cadena
             }
         ],
-        model: "gpt-3.5-turbo-0125",
+        model: "gpt-4o-mini",
     });
     //const content = chatCompletion.choices[0].message.content;
     //console.log({content})
